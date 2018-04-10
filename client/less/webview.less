@@ -1,0 +1,84 @@
+@import "../node_modules/bootstrap/less/bootstrap";
+@import "common";
+@import "variables";
+
+.b-page {
+  padding: 30px;
+}
+
+.b-title {
+  font-size: 24px;
+}
+
+.b-loading {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 10;
+  background-color: #fff;
+
+  &__logo {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    margin-top: -50px;
+    margin-left: -50px;
+  }
+}
+
+.b-card {
+  padding: 20px;
+  border: 1px solid #ccc;
+  text-align: center;
+  margin-bottom: 30px;
+
+  & > .image-container {
+    width: 100%;
+    height: 200px;
+
+    & > .image {
+      width: 100%;
+    }
+
+    @media (max-width: 767px) {
+      height: 150px;
+    }
+
+    @media (max-width: 576px) {
+      height: 100px;
+    }
+  }
+
+  & > .name {
+    height: 40px;
+    text-align: left;
+    font-size: 18px;
+    margin: 15px 0 0 0;
+    font-weight: bold;
+  }
+
+  & > .price {
+    text-align: left;
+    font-size: 16px;
+    margin: 5px 0 0 0;
+    color: #7c7c7c;
+  }
+
+  &:hover {
+    cursor: pointer;
+    border: 1px solid #0084ff;
+  }
+}
+
+.b-row {
+  padding: 10px;
+  border: 1px solid #ccc;
+  margin-bottom: 5px;
+  cursor: pointer;
+
+  &:hover {
+    border: 1px solid #0084ff;
+  }
+}

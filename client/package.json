@@ -1,0 +1,32 @@
+{
+  "name": "genome-assistant-server",
+  "version": "1.0.0",
+  "description": "",
+  "main": "",
+  "scripts": {
+    "build-less": "bash ./bash/build-less.sh",
+    "watch-less": "watch 'npm run build-less' less/",
+    "build-js": "bash ./bash/build-js.sh",
+    "watch-js": "watch 'npm run build-js' js/",
+    "build": "npm run build-less && npm run build-js",
+    "watch": "concurrently 'npm run watch-less' 'npm run watch-js'"
+  },
+  "author": "",
+  "license": "ISC",
+  "devDependencies": {
+    "babel-core": "^6.26.0",
+    "babel-preset-env": "^1.6.1",
+    "babelify": "^8.0.0",
+    "bootstrap": "^3.3.7",
+    "browserify": "^14.5.0",
+    "concurrently": "^3.5.1",
+    "jquery": "^3.2.1",
+    "less": "^2.7.3",
+    "less-plugin-clean-css": "^1.5.1",
+    "techv-web-control": "git+ssh://git@bitbucket.org/technology-valley/techv-web-control.git",
+    "techv-web-sdk": "git+ssh://git@bitbucket.org/technology-valley/techv-web-sdk.git",
+    "uglifyjs": "^2.4.11",
+    "watch": "^1.0.2"
+  },
+  "dependencies": {}
+}
